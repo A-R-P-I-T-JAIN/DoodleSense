@@ -24,7 +24,7 @@ const Playground = () => {
     formData.append("image", blob, "canvas.png");
 
     try {
-      const response = await fetch("http://localhost:3000/calculate", {
+      const response = await fetch("https://doodlesense.onrender.com/calculate", {
         method: "POST",
         body: formData,
       });
@@ -121,7 +121,7 @@ const Playground = () => {
   const handleGenerate = async () => {
     setLoading(true); // Set loading to true
     try {
-      const response = await fetch("http://localhost:3000/generate", {
+      const response = await fetch("https://doodlesense.onrender.com/generate", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
