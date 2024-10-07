@@ -17,7 +17,7 @@ app.use(express.urlencoded({ extended: true }));
 const upload = multer({ dest: "uploads/" });
 
 // Initialize Google Generative AI client
-const genAI = new GoogleGenerativeAI("AIzaSyAO9vTO51hqh07C-DSz1zmYbF4jAl6GeIM");
+const genAI = new GoogleGenerativeAI(process.env.API_KEY);
 // const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 const model = genAI.getGenerativeModel({
   model: "gemini-1.5-flash",
@@ -73,7 +73,7 @@ Please provide only the answer without any additional explanation or reasoning.`
     const result = await model.generateContent([prompt, imagePart]);
 
     // Log the result
-    console.log(result.response.text());
+    // console.log(result.response.text());
 
     // Send back the result to the client
     res.send(result.response.text());
@@ -155,7 +155,7 @@ The output should reflect all specified details precisely without any additional
     // Check if the response exists and send the result to the client
     if (result && result.response && typeof result.response.text === 'function') {
       const responseText = await result.response.text();
-      console.log(responseText);
+      // console.log(responseText);
       res.send(responseText);
     } else {
       throw new Error('Unexpected API response');
