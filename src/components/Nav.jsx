@@ -10,7 +10,9 @@ const Nav = () => {
         <h1 className="text-xl sm:text-2xl md:text-3xl text-white">DoodleSense</h1>
         <div>
           {isSignedIn ? (
+            <div className="pt-1" >
             <UserButton />
+            </div>
           ) : (
             <div className="flex gap-2">
               <SignInButton>

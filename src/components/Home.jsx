@@ -55,8 +55,8 @@ const Home = () => {
         <img
           src={doodle1}
           alt="Doodle 1"
-          className="absolute w-[100px] md:w-[150px] lg:w-[200px]"
-          style={{ top: "15%", left: "15%" }}
+          className="absolute w-[100px] md:w-[150px] lg:w-[200px] top-[15%] left-[15%]"
+          // style={{ top: "15%", left: "15%" }}
         />
         <img
           src={doodle2}
@@ -67,20 +67,20 @@ const Home = () => {
         <img
           src={doodle3}
           alt="Doodle 3"
-          className="absolute w-[100px] md:w-[150px] lg:w-[200px]"
-          style={{ top: "50%", left: "5%" }}
+          className="absolute w-[100px] md:w-[150px] lg:w-[200px] top-[70%] md:top-[50%] left-[5%]"
+          // style={{ top: "50%", left: "5%" }}
         />
         <img
           src={doodle4}
           alt="Doodle 4"
-          className="absolute w-[90px] md:w-[140px] lg:w-[180px]"
-          style={{ top: "60%", right: "5%" }}
+          className="absolute w-[90px] md:w-[140px] lg:w-[180px] top-[75%] md:top-[60%] right-[5%]"
+          // style={{ top: "60%", right: "5%" }}
         />
         <img
           src={doodle5}
           alt="Doodle 5"
-          className="absolute w-[100px] md:w-[140px] lg:w-[180px]"
-          style={{ top: "15%", left: "45%" }}
+          className="absolute w-[100px] md:w-[140px] lg:w-[180px] top-[30%] left-[45%] md:top-[15%]"
+          // style={{ top: "15%", left: "45%" }}
         />
         {/* Scroll Icon */}
         <div className="absolute bottom-5 flex flex-col items-center animate-bounce">
@@ -96,7 +96,7 @@ const Home = () => {
       >
         {/* Each video takes up full viewport width */}
         <div className="w-[100vw] flex flex-col justify-center items-center">
-          <h1 className="text-3xl md:text-5xl lg:text-6xl text-white mb-4">
+          <h1 className="text-2xl md:text-5xl lg:text-6xl text-white mb-4">
             Solve Mathematical Problems
           </h1>
           <video 
@@ -109,7 +109,7 @@ const Home = () => {
           />
         </div>
         <div className="w-[100vw] flex flex-col justify-center items-center">
-          <h1 className="text-3xl md:text-5xl lg:text-6xl text-white mb-4">
+          <h1 className="text-2xl md:text-5xl lg:text-6xl text-white mb-4">
             Solve Physics Problems
           </h1>
           <video
@@ -122,7 +122,7 @@ const Home = () => {
           />
         </div>
         <div className="w-[100vw] flex flex-col justify-center items-center">
-          <h1 className="text-3xl md:text-5xl lg:text-6xl text-white mb-4">
+          <h1 className="text-2xl md:text-5xl lg:text-6xl text-white mb-4">
             Generate With AI
           </h1>
           <video
